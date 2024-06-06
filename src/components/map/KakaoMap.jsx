@@ -7,7 +7,7 @@ import useKakaoLoader from "./useKakaoLoader.jsx";
 //import { useNavigate } from "react-router-dom";
 
 const KakaoMap = () => {
-  useKakaoLoader();
+  //useKakaoLoader();
 
   return (
     <MapContainer>

@@ -53,16 +53,20 @@ const FilterBtns = styled.div`
 `;
 
 const FilterButton = styled.div`
-  border: 0.1rem solid rgb(127, 127, 127);
+  border: 0.1rem solid #aaa;
   font-family: Pretendard;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 1.5rem;
-  padding: 0.6rem;
+  padding: 0.4rem 0.8rem 0.5rem 0.5rem;
   height: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:active {
+    background-color: #aaa;
+  }
 `;
 
 const PhotoIcon = styled(FaCamera)`

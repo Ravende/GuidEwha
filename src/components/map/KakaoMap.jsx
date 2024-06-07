@@ -7,12 +7,11 @@ import useKakaoLoader from "./useKakaoLoader.jsx";
 //import { useNavigate } from "react-router-dom";
 
 const KakaoMap = () => {
-  //useKakaoLoader();
+  useKakaoLoader();
 
   return (
     <MapContainer>
       <Map
-        id="map"
         center={{
           lat: 37.559716,
           lng: 126.945468,
@@ -30,8 +29,7 @@ const KakaoMap = () => {
 export default KakaoMap;
 
 const MapContainer = styled.div`
-  position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 360px;
 `;

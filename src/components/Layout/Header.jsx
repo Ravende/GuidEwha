@@ -17,21 +17,25 @@ const HeaderComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 4rem;
+  height: 5rem;
+  min-height: 4rem;
   background-color: rgb(0, 70, 42);
+  //border-bottom: 2px solid rgb(0, 70, 42);
+  //border-top: 10px solid rgb(0, 70, 42);
 `;
 
 const HeaderText = styled.div`
   color: white;
+  //color: rgb(0, 70, 42);
   font-family: Pretendard;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 `;
 
 const TranslateIcon = styled(MdTranslate)`
   color: white;
-  width: 2rem;
-  height: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   position: absolute;
-  right: 1rem;
+  right: 1.2rem;
 `;

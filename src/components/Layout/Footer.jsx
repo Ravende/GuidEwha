@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <FooterComponent>
       <FooterText>GuidEwha</FooterText>
-      <SchoolLogo src={schoolLogo} alt="학교 마크" />
+      <SchoolLogo
+        src="https://www.ewha.ac.kr/_res/ewha/img/intro/img-symbol01.gif"
+        alt="학교 마크"
+      />
     </FooterComponent>
   );
 };
@@ -21,14 +24,14 @@ const FooterComponent = styled.div`
 `;
 
 const SchoolLogo = styled.img`
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
 `;
 
 const FooterText = styled.div`
   padding: 0.4rem;
   font-family: Pretendard;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
   color: rgb(0, 70, 42);
 `;

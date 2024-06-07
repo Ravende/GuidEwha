@@ -23,13 +23,14 @@ const MainComponent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 `;
 
 const MapImg = styled.img`
   width: 32rem;
   max-width: 100%;
-  padding: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 `;
 
 const MapBtns = styled.div`

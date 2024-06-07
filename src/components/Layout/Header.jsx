@@ -17,7 +17,7 @@ const HeaderComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 5rem;
   min-height: 4rem;
   background-color: rgb(0, 70, 42);

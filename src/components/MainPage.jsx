@@ -1,33 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import FilteringBtn from "./FilteringBtn";
+import MapBtn from "./MapBtn";
 import schoolMap from "../assets/school-map.png";
-import { FaCamera } from "react-icons/fa";
-import { IoRestaurant } from "react-icons/io5";
-import { IoMdCafe } from "react-icons/io";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const MainPage = () => {
+  const navigate = useNavigate();
+  const handleGoECC = () => {
+    navigate("/detailPage/ECC");
+  };
+
   return (
     <>
       <MainComponent>
-        <FilterBtns>
-          <FilterButton>
-            <PhotoIcon />
-            사진 스팟
-          </FilterButton>
-          <FilterButton>
-            <MealIcon />
-            식당
-          </FilterButton>
-          <FilterButton>
-            <CafeIcon />
-            카페
-          </FilterButton>
-        </FilterBtns>
+        <FilteringBtn />
         <MapImg src={schoolMap} />
-        <MapBtns>
-          <MapButton>맞춤 경로 추천</MapButton>
-          <MapButton>규칙집</MapButton>
-        </MapBtns>
+        <IconContainer>
+          <MapPinAryeong />
+          <MapPinECC />
+          <MapPinMuseum />
+        </IconContainer>
+        <MapBtn />
       </MainComponent>
     </>
   );
@@ -40,54 +35,7 @@ const MainComponent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
-`;
-
-const FilterBtns = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1rem;
-  width: calc(100% - 2rem);
-`;
-
-const FilterButton = styled.div`
-  border: 0.1rem solid #aaa;
-  font-family: Pretendard;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 1.5rem;
-  padding: 0.4rem 0.8rem 0.5rem 0.5rem;
-  height: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  &:active {
-    background-color: #aaa;
-  }
-`;
-
-const PhotoIcon = styled(FaCamera)`
-  color: rgb(39, 174, 96);
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.5rem;
-`;
-
-const MealIcon = styled(IoRestaurant)`
-  color: rgb(39, 174, 96);
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.3rem;
-`;
-
-const CafeIcon = styled(IoMdCafe)`
-  color: rgb(39, 174, 96);
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.3rem;
+  width: 100%;
 `;
 
 const MapImg = styled.img`
@@ -97,25 +45,36 @@ const MapImg = styled.img`
   padding-top: 2rem;
 `;
 
-const MapBtns = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2.5rem;
+const IconContainer = styled.div`
+  position: absolute;
+`;
+
+const MapPinAryeong = styled(FaMapMarkerAlt)`
+  color: rgb(192, 57, 43);
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: -7.3rem;
+  right: -9.6rem;
   cursor: pointer;
 `;
 
-const MapButton = styled.div`
-  border: 0.2rem solid rgb(0, 102, 79);
-  background-color: rgba(0, 70, 42, 0.13);
-  width: 12rem;
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //color: white;
-  font-family: Pretendard;
-  font-weight: 600;
-  font-size: 1.4rem;
-  border-radius: 3rem;
+const MapPinECC = styled(FaMapMarkerAlt)`
+  color: rgb(192, 57, 43);
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.8rem;
+  right: -5.3rem;
+  cursor: pointer;
+`;
+
+const MapPinMuseum = styled(FaMapMarkerAlt)`
+  color: rgb(192, 57, 43);
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 7rem;
+  right: 4.4rem;
+  cursor: pointer;
 `;

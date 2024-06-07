@@ -85,7 +85,7 @@ const CommentBox = styled.div`
 `;
 
 const InputBox = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 17rem;
   padding: 1rem;
   font-size: 1.2rem;

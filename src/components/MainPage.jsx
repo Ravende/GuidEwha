@@ -19,7 +19,7 @@ const MainPage = () => {
         <MapImg src={schoolMap} />
         <IconContainer>
           <MapPinAryeong />
-          <MapPinECC />
+          <MapPinECC onClick={handleGoECC} />
           <MapPinMuseum />
         </IconContainer>
         <MapBtn />

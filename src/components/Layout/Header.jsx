@@ -32,6 +32,7 @@ const HeaderText = styled.div`
   font-family: Pretendard;
   font-weight: 700;
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 
 const TranslateIcon = styled(MdTranslate)`
@@ -40,4 +41,5 @@ const TranslateIcon = styled(MdTranslate)`
   height: 2.3rem;
   position: absolute;
   right: 1.2rem;
+  cursor: pointer;
 `;

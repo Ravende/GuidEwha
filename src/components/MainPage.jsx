@@ -40,16 +40,15 @@ const MainComponent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 `;
 
 const FilterBtns = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%;
   gap: 1rem;
-  padding-left: 2rem;
+  width: calc(100% - 2rem);
 `;
 
 const FilterButton = styled.div`
@@ -63,6 +62,7 @@ const FilterButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &:active {
     background-color: #aaa;
@@ -102,6 +102,7 @@ const MapBtns = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2.5rem;
+  cursor: pointer;
 `;
 
 const MapButton = styled.div`

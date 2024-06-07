@@ -23,6 +23,7 @@ const MainComponent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
 `;
 
 const MapImg = styled.img`

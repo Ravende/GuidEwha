@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { MdTranslate } from "react-icons/md";
+import Translate from "../Translate.jsx";
 
 const Header = () => {
+  const [isLangOpen, setIsLangOpen] = useState(false);
+
+  const handleLanguageBox = () => {
+    setIsLangOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    if (isLangOpen) {
+      setIsLangOpen(true);
+    }
+  }, [isLangOpen]);
+
   return (
     <HeaderComponent>
       <HeaderText>Ewha Tour Map</HeaderText>
-      <TranslateIcon />
+      <TranslateIcon onClick={handleLanguageBox} />
+      {isLangOpen && <Translate onClose={handleLanguageBox} />}
     </HeaderComponent>
   );
 };

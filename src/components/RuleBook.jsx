@@ -10,7 +10,7 @@ const RuleBook = ({ onClose }) => {
       <RuleText>
         <ul>
           <li>
-            ECC 내부 건물은 지하 4층만 출입 가능합니다.관광객께서는 ECC 3번
+            ECC 내부 건물은 지하 4층만 출입 가능합니다. 관광객께서는 ECC 3번
             출구와 4번 출구를 이용해주십시오.
           </li>
           <li>
@@ -52,8 +52,6 @@ const RuleBookComponent = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  //justify-content: center;
-  //align-items: center;
   z-index: 100;
 `;
 
@@ -64,8 +62,6 @@ const CloseBtn = styled(IoCloseCircleOutline)`
   height: 3rem;
   top: 2.2rem;
   right: 1.5rem;
-  //top: -15rem;
-  //right: -18rem;
   cursor: pointer;
 `;
 
@@ -82,7 +78,9 @@ const RuleTitle = styled.div`
 const RuleText = styled.div`
   font-family: Pretendard;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
-  line-height: 1.7;
+  line-height: 2;
+  padding: 1.2rem;
+  padding-top: 0;
 `;

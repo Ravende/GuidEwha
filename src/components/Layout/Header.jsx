@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import { MdTranslate } from "react-icons/md";
 import Translate from "../Translate.jsx";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const goMainPage = () => {
+    navigate("/");
+  };
+
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   const handleLanguageBox = () => {
@@ -18,7 +24,7 @@ const Header = () => {
 
   return (
     <HeaderComponent>
-      <HeaderText>Ewha Tour Map</HeaderText>
+      <HeaderText onClick={goMainPage}>Ewha Tour Map</HeaderText>
       <TranslateIcon onClick={handleLanguageBox} />
       {isLangOpen && <Translate onClose={handleLanguageBox} />}
     </HeaderComponent>

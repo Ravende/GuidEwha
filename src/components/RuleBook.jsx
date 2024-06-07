@@ -73,14 +73,15 @@ const RuleTitle = styled.div`
   display: flex;
   justify-content: center;
   padding: 0.5rem;
+  padding-bottom: 1.5rem;
 `;
 
 const RuleText = styled.div`
   font-family: Pretendard;
   color: #ffffff;
   font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2;
+  font-size: 1.3rem;
+  line-height: 2.1;
   padding: 1.2rem;
   padding-top: 0;
 `;

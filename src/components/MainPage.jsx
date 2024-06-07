@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import FilteringBtn from "./FilteringBtn";
@@ -12,19 +12,41 @@ const MainPage = () => {
     navigate("/detailPage/ECC");
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleMouseEnter = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <>
-      <MainComponent>
-        <FilteringBtn />
-        <MapImg src={schoolMap} />
-        <IconContainer>
-          <MapPinAryeong />
-          <MapPinECC onClick={handleGoECC} />
-          <MapPinMuseum />
-        </IconContainer>
-        <MapBtn />
-      </MainComponent>
-    </>
+    <MainComponent>
+      <FilteringBtn />
+      <MapImg src={schoolMap} />
+      <IconContainer>
+        <MapPinAryeong
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
+        <MapPinECC onClick={handleGoECC} />
+        <MapPinMuseum />
+      </IconContainer>
+      <MapBtn />
+      {isModalOpen && (
+        <Modal>
+          <ModalContent>
+            <Title>이화역사관 (Ewha Archives)</Title>
+            <Text>
+              이화학당 최초의 한옥교사를 재현하여 세워졌다. 한국의 방문객이라면
+              누구나 이곳에서 한국 근현대사를 속에서의 이화의 역할과 의미를
+              되새기는 시간을 가질 수 있다.
+            </Text>
+          </ModalContent>
+        </Modal>
+      )}
+    </MainComponent>
   );
 };
 
@@ -77,4 +99,36 @@ const MapPinMuseum = styled(FaMapMarkerAlt)`
   top: 7rem;
   right: 4.4rem;
   cursor: pointer;
+`;
+
+const Modal = styled.div`
+  position: absolute;
+  top: 12rem;
+  left: 24rem;
+  width: 15rem;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0.7rem;
+  border: 1px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 1rem;
+`;
+
+const ModalContent = styled.div`
+  text-align: center;
+  padding: 0;
+  margin: 0;
+`;
+
+const Title = styled.p`
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 1.2rem;
+`;
+
+const Text = styled.p`
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 0.8rem;
 `;

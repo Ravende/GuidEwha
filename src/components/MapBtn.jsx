@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import RuleBook from "./RuleBook";
 
 const MapBtn = () => {
+  const navigate = useNavigate();
+  const goTourRoute = () => {
+    navigate("/RoutePage");
+  };
+
   const [isRuleOpen, setIsRuleOpen] = useState(false);
 
   const handleRuleBook = () => {
@@ -17,7 +23,7 @@ const MapBtn = () => {
 
   return (
     <MapBtns>
-      <MapButton>맞춤 경로 추천</MapButton>
+      <MapButton onClick={goTourRoute}>맞춤 경로 추천</MapButton>
       <MapButton onClick={handleRuleBook}>규칙집</MapButton>
       {isRuleOpen && <RuleBook onClose={handleRuleBook} />}
     </MapBtns>

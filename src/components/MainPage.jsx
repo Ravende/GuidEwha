@@ -1,11 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import schoolMap from "../assets/school-map.png";
+import { FaCamera } from "react-icons/fa";
+import { IoRestaurant } from "react-icons/io5";
+import { IoMdCafe } from "react-icons/io";
 
 const MainPage = () => {
   return (
     <>
       <MainComponent>
+        <FilterBtns>
+          <FilterButton>
+            <PhotoIcon />
+            사진 스팟
+          </FilterButton>
+          <FilterButton>
+            <MealIcon />
+            식당
+          </FilterButton>
+          <FilterButton>
+            <CafeIcon />
+            카페
+          </FilterButton>
+        </FilterBtns>
         <MapImg src={schoolMap} />
         <MapBtns>
           <MapButton>맞춤 경로 추천</MapButton>
@@ -26,6 +43,49 @@ const MainComponent = styled.div`
   width: 100%;
 `;
 
+const FilterBtns = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1rem;
+  padding-left: 2rem;
+`;
+
+const FilterButton = styled.div`
+  border: 0.1rem solid rgb(127, 127, 127);
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 1.5rem;
+  padding: 0.6rem;
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PhotoIcon = styled(FaCamera)`
+  color: rgb(39, 174, 96);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+`;
+
+const MealIcon = styled(IoRestaurant)`
+  color: rgb(39, 174, 96);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.3rem;
+`;
+
+const CafeIcon = styled(IoMdCafe)`
+  color: rgb(39, 174, 96);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.3rem;
+`;
+
 const MapImg = styled.img`
   width: 32rem;
   max-width: 100%;
@@ -38,7 +98,6 @@ const MapBtns = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2.5rem;
-  margin-bottom: 1rem;
 `;
 
 const MapButton = styled.div`

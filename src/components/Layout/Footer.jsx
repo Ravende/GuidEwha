@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import schoolLogo from "../../assets/school-mark.png";
 
 const Footer = () => {
   return (
@@ -20,7 +19,9 @@ const FooterComponent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
   padding-bottom: 1rem;
+  padding-top: 2rem;
 `;
 
 const SchoolLogo = styled.img`

@@ -20,6 +20,7 @@ const HeaderComponent = styled.div`
   width: 100%;
   height: 5rem;
   min-height: 4rem;
+  margin-bottom: 1rem;
   background-color: rgb(0, 70, 42);
   //border-bottom: 2px solid rgb(0, 70, 42);
   //border-top: 10px solid rgb(0, 70, 42);
